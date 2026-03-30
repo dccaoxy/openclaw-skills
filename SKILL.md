@@ -49,25 +49,31 @@
 
 **经验**：世界简报页面即使付费订阅者也需要登录才能看完整内容。话题页大多数文章免费。
 
-### 登录操作流程
+### 登录态检测流程（自动）
 
 ```
 1. 主代理：openclaw browser open "https://www.economist.com/the-world-in-brief"
-2. 主代理：发消息给用户"浏览器已打开，请登录"
-3. 用户登录
-4. 用户发消息"登录好了"
-5. 主代理：snapshot 验证登录成功（检查是否有 Subscriber only）
-6. 验证成功后，启动子代理抓取
+2. sleep 5  # 等待页面加载
+3. 主代理：snapshot 获取页面内容
+4. 检查是否有 "subscriber only" 或 "Subscriber only" 字样
+   ├── 无 → 已登录，直接启动子代理
+   └── 有 → 未登录，继续步骤 5
+5. 发消息给用户："检测到未登录，需要你手动登录"
+6. 用户登录完成后，再次 snapshot 验证
+7. 验证成功后，启动子代理抓取
 ```
 
 ### 验证登录状态
 
 ```bash
-openclaw browser snapshot | grep -i "subscriber only"
+openclaw browser snapshot
 ```
 
-- 有输出 → 仍为访客态，需要等待用户登录
-- 无输出 → 登录成功，可以继续
+检查返回内容中是否包含：
+- `"Subscriber only"` 或 `"subscriber only"` → 仍为访客态
+- `"Insider"` 或用户菜单按钮 active → 已登录
+
+**自动化原则**：只有检测到未登录时才要求用户手动操作，已登录情况下完全静默跳过。
 
 ---
 
