@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "music-cog": {
+      "version": "1.0.1",
+      "installedAt": 1774496297999
+    },
+    "minimax-tts-cn": {
+      "version": "1.0.0",
+      "installedAt": 1774496342041
+    },
+    "scrapling-official": {
+      "version": "0.4.2",
+      "installedAt": 1774594469997
+    }
+  }
+}
