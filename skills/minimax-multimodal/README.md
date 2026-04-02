@@ -27,9 +27,30 @@ npx clawhub@latest install minimax-multimodal
 
 ### 环境变量
 
+使用前需要设置以下环境变量：
+
 ```bash
+# MiniMax API Key（必须）
 export MINIMAX_API_KEY="your-minimax-api-key"
+
+# 飞书应用配置（必须，用于发送消息到飞书）
+export FEISHU_APP_ID="your-feishu-app-id"
+export FEISHU_APP_SECRET="your-feishu-app-secret"
 ```
+
+### 获取 API Key
+
+**MiniMax API Key：**
+1. 打开 https://platform.minimaxi.com
+2. 登录并进入 **用户中心 -> 接口密钥**
+3. 创建 Token Plan Key 或 API Key
+4. 复制密钥
+
+**飞书应用配置：**
+1. 打开 https://open.feishu.cn/app
+2. 创建或选择你的应用
+3. 获取 **App ID** 和 **App Secret**
+4. 确保应用已开通 **发消息** 权限
 
 ## 使用方法
 

@@ -18,17 +18,17 @@ VIDEO_QUERY_URL = f"{MINIMAX_API_URL}/query/video_generation"
 FILE_RETRIEVE_URL = f"{MINIMAX_API_URL}/files/retrieve"
 
 # 默认 API Key
-DEFAULT_API_KEY = "sk-cp-d-Yq48OkLtw3m7ip6yIpT11DJoC7nChNJ5JGTblW6T5feNi2IYP1hM9CTvtFX9H3v1SzMby0HyNN3O09Ewh3m8joPZU70X5J2jICElJXdsTuBir2AciA6kA"
+# API Key 从环境变量读取
 
 # 飞书配置
-FEISHU_APP_ID = "cli_a93d390a55f99cca"
-FEISHU_APP_SECRET = "hnXqsu6Y4stY2FQMh0AIEBRNzu5q1ijN"
+FEISHU_APP_ID = os.environ.get("FEISHU_APP_ID", "")
+FEISHU_APP_SECRET = os.environ.get("FEISHU_APP_SECRET", "")
 FEISHU_API_URL = "https://open.feishu.cn/open-apis"
 
 
 def get_minimax_key():
     """获取 MiniMax API Key"""
-    return os.environ.get("MINIMAX_API_KEY", DEFAULT_API_KEY)
+    return os.environ.get("MINIMAX_API_KEY", "")
 
 
 def get_feishu_token():
