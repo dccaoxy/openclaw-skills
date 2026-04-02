@@ -1,0 +1,35 @@
+# Audio files (too large)
+*.mp3
+*.wav
+*.ogg
+*.m4a
+
+# Images (large)
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Browser data
+browser/
+
+# Logs
+logs/
+
+# Media cache
+media/
+
+# Minimax output (regeneratable)
+minimax-output/
+
+# OS files
+.DS_Store
+*.swp
+*.swo
+
+# Sensitive credentials (keep the directory structure, ignore contents)
+credentials/**/*
+!credentials/*.json
+
+# OpenClaw package files (not needed in backup)
+*.log

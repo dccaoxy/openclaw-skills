@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.28",
+    "lastTouchedAt": "2026-04-01T02:14:50.272Z"
+  },
+  "env": {
+    "BRAVE_API_KEY": "BSAk4MfTHtcsIgCDfu3OpS9bckVpcgZ"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-29T02:04:31.359Z",
+    "lastRunVersion": "2026.3.24",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "openclaw",
+    "profiles": {
+      "openclaw": {
+        "cdpPort": 18800,
+        "color": "#FF4500"
+      },
+      "user": {
+        "driver": "existing-session",
+        "attachOnly": true,
+        "color": "#00AA00"
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "minimax:cn": {
+        "provider": "minimax",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "apiKey": "sk-cp-d-Yq48OkLtw3m7ip6yIpT11DJoC7nChNJ5JGTblW6T5feNi2IYP1hM9CTvtFX9H3v1SzMby0HyNN3O09Ewh3m8joPZU70X5J2jICElJXdsTuBir2AciA6kA",
+        "api": "anthropic-messages",
+        "authHeader": true,
+        "models": [
+          {
+            "id": "MiniMax-M2.7-highspeed",
+            "name": "MiniMax M2.7 HighSpeed",
+            "api": "anthropic-messages",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "api": "anthropic-messages",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "api": "anthropic-messages",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 128000
+          },
+          {
+            "id": "speech-2.8-hd",
+            "name": "MiniMax Speech 2.8 HD",
+            "api": "anthropic-messages",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 10000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "image-01",
+            "name": "MiniMax Image 01",
+            "api": "anthropic-messages",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 10000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "MiniMax-Hailuo-2.3-Fast",
+            "name": "MiniMax Hailuo 2.3 Fast",
+            "api": "anthropic-messages",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 10000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "MiniMax-Hailuo-02",
+            "name": "MiniMax Hailuo 02",
+            "api": "anthropic-messages",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 10000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "Music-2.5+",
+            "name": "MiniMax Music 2.5+",
+            "api": "anthropic-messages",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 10000,
+            "maxTokens": 4096
+          }
+        ]
+      },
+      "modelstudio": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": "sk-sp-94f2297648054c268253c01622373880",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-plus",
+            "name": "Qwen 3.5 Plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "kimi-k2.5",
+            "name": "Kimi K2.5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          },
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          },
+          {
+            "id": "MiniMax-M2.5",
+            "name": "MiniMax M2.5",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 128000
+          },
+          {
+            "id": "qwen3-max-2026-01-23",
+            "name": "Qwen3 Max 2026-01-23",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-next",
+            "name": "Qwen3 Coder Next",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 65536
+          },
+          {
+            "id": "qwen3-coder-plus",
+            "name": "Qwen3 Coder Plus",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 1000000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 202752,
+            "maxTokens": 16384
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "minimax/MiniMax-M2.7-highspeed"
+      },
+      "models": {
+        "minimax/MiniMax-M2.7": {
+          "alias": "Minimax"
+        },
+        "minimax/MiniMax-M2.7-highspeed": {}
+      },
+      "workspace": "/Users/caoxy/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true
+      },
+      {
+        "id": "news-officer",
+        "name": "news-officer",
+        "workspace": "/Users/caoxy/.openclaw/agents/news-officer",
+        "agentDir": "/Users/caoxy/.openclaw/agents/news-officer",
+        "model": "minimax/MiniMax-M2.7-highspeed"
+      },
+      {
+        "id": "stock-analyst",
+        "name": "stock-analyst",
+        "workspace": "/Users/caoxy/.openclaw/agents/stock-analyst",
+        "agentDir": "/Users/caoxy/.openclaw/agents/stock-analyst",
+        "model": "modelstudio/kimi-k2.5"
+      },
+      {
+        "id": "musicer",
+        "name": "musicer",
+        "workspace": "/Users/caoxy/.openclaw/agents/musicer",
+        "agentDir": "/Users/caoxy/.openclaw/agents/musicer",
+        "model": "minimax/MiniMax-M2.7-highspeed"
+      },
+      {
+        "id": "quality-reviewer",
+        "name": "quality-reviewer",
+        "workspace": "/Users/caoxy/.openclaw/agents/quality-reviewer",
+        "agentDir": "/Users/caoxy/.openclaw/agents/quality-reviewer",
+        "model": "modelstudio/kimi-k2.5"
+      },
+      {
+        "id": "coder1",
+        "name": "coder1",
+        "workspace": "/Users/caoxy/.openclaw/agents/coder1",
+        "agentDir": "/Users/caoxy/.openclaw/agents/coder1",
+        "model": "minimax/MiniMax-M2.7-highspeed"
+      },
+      {
+        "id": "inspiration-assistant",
+        "name": "inspiration-assistant",
+        "workspace": "/Users/caoxy/.openclaw/agents/inspiration-assistant",
+        "agentDir": "/Users/caoxy/.openclaw/agents/inspiration-assistant",
+        "model": "minimax/MiniMax-M2.7-highspeed"
+      },
+      {
+        "id": "data-analyst",
+        "name": "data-analyst",
+        "workspace": "/Users/caoxy/caoxy/Data_analysis/.agent",
+        "agentDir": "/Users/caoxy/.openclaw/agents/数据分析师",
+        "identity": {
+          "name": "数据分析师",
+          "emoji": "📊"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      }
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "main",
+        "news-officer",
+        "stock-analyst",
+        "musicer",
+        "quality-reviewer",
+        "coder1",
+        "inspiration-assistant"
+      ]
+    }
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "news-officer",
+      "match": {
+        "channel": "feishu",
+        "accountId": "news-officer"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "stock-analyst",
+      "match": {
+        "channel": "feishu",
+        "accountId": "stock-analyst"
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "data-analyst",
+      "match": {
+        "channel": "feishu",
+        "accountId": "data-analyst"
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "mcp": true,
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "web": {},
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "accounts": {
+        "default": {
+          "appId": "cli_a93d390a55f99cca",
+          "appSecret": "hnXqsu6Y4stY2FQMh0AIEBRNzu5q1ijN",
+          "dmPolicy": "pairing"
+        },
+        "coder1": {
+          "appId": "cli_a930d9d951bbdbc9",
+          "appSecret": "C0LPRR329y1w6ID8bNwYseYp7Hmixl5u"
+        },
+        "news-officer": {
+          "appId": "cli_a930d8750f381bdf",
+          "appSecret": "keC4cmAYfGzG0CChEVrPmeFWU571dK2B"
+        },
+        "stock-analyst": {
+          "appId": "cli_a937bfcdbcb9dcb5",
+          "appSecret": "ZyUj64PYK1Eq91TvCNtIrghcAZ5LAHFc"
+        },
+        "inspiration-assistant": {
+          "appId": "cli_a94a2b65d67a9bd8",
+          "appSecret": "j2tQ10N4OVKMRCPOrBBSDgIOJ7XZEfmI"
+        },
+        "data-analyst": {
+          "appId": "cli_a94e7271c4fa9bd3",
+          "appSecret": "Spy8MoaoiDhYAheKRchLIf2mHUPsz7f6"
+        }
+      },
+      "defaultAccount": "default",
+      "domain": "feishu",
+      "connectionMode": "websocket",
+      "webhookPath": "/feishu/events",
+      "dmPolicy": "pairing",
+      "groupPolicy": "open",
+      "reactionNotifications": "own",
+      "typingIndicator": true,
+      "resolveSenderNames": true,
+      "groups": {}
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "cba1385ae127dbc3f28c9e92719213e4cb9f082bef8cac8e"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "mcp": {
+    "servers": {
+      "minimax": {
+        "command": "uvx",
+        "args": [
+          "minimax-coding-plan-mcp",
+          "-y"
+        ],
+        "env": {
+          "MINIMAX_API_KEY": "sk-cp-d-Yq48OkLtw3m7ip6yIpT11DJoC7nChNJ5JGTblW6T5feNi2IYP1hM9CTvtFX9H3v1SzMby0HyNN3O09Ewh3m8joPZU70X5J2jICElJXdsTuBir2AciA6kA",
+          "MINIMAX_API_HOST": "https://api.minimaxi.com"
+        },
+        "type": "stdio"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": {
+        "enabled": true,
+        "config": {}
+      },
+      "browser": {
+        "enabled": true,
+        "config": {}
+      }
+    }
+  }
+}
